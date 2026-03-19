@@ -85,6 +85,38 @@ The remote MCP endpoint declared in `server.json` uses the same token pair throu
 - `Authorization: Bearer <gateway_token>`
 - `x-user-token: <user_token>`
 
+## Distribution
+
+This skill has been published or submitted to the following platforms:
+
+### Already Live
+
+| Platform | Link |
+|----------|------|
+| **ClawHub (OpenClaw)** | Published via `clawhub publish` |
+| **Official MCP Registry** | `io.github.xllinbupt/liepin-jobs` |
+| **GitHub** | https://github.com/xllinbupt/MCP2skill |
+
+### PR Submitted (pending merge)
+
+| Platform | PR |
+|----------|-----|
+| **skills-hub.cc** | [qufei1993/skills-hub#36](https://github.com/qufei1993/skills-hub/pull/36) |
+| **TerminalSkills.io** | [TerminalSkills/skills#471](https://github.com/TerminalSkills/skills/pull/471) |
+| **alirezarezvani/claude-skills** | [#384](https://github.com/alirezarezvani/claude-skills/pull/384) |
+| **travisvn/awesome-claude-skills** | [#329](https://github.com/travisvn/awesome-claude-skills/pull/329) |
+| **BehiSecc/awesome-claude-skills** | [#132](https://github.com/BehiSecc/awesome-claude-skills/pull/132) |
+| **VoltAgent/awesome-agent-skills** | [#247](https://github.com/VoltAgent/awesome-agent-skills/pull/247) |
+
+### Auto-indexed (no action needed)
+
+| Platform | Status |
+|----------|--------|
+| **SkillHub** (skillhub.club) | GitHub topics configured, waiting for crawler |
+| **LobeHub Skills** (lobehub.com/skills) | Has SKILL.md, waiting for crawler |
+| **claudemarketplaces.com** | Has `.claude-plugin/`, waiting for crawler |
+| **SkillsMP** (skillsmp.com) | Needs ≥2 GitHub stars to be indexed |
+
 ## Repository Goals
 
 - keep skills lightweight and easy to install
