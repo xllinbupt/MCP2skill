@@ -1,0 +1,17 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "mcp2skill-marketplace",
+  "version": "0.1.0",
+  "description": "Marketplace wrapper for MCP2skill repositories.",
+  "owner": {
+    "name": "xllin",
+    "url": "https://github.com/xllinbupt"
+  },
+  "plugins": [
+    {
+      "name": "mcp2skill",
+      "description": "Installable AI skills packaged from MCP-powered workflows.",
+      "source": "."
+    }
+  ]
+}

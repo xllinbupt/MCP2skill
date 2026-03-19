@@ -1,0 +1,25 @@
+{
+  "name": "mcp2skill",
+  "version": "0.1.0",
+  "description": "Installable AI skills packaged from MCP-powered workflows.",
+  "author": {
+    "name": "xllin",
+    "url": "https://github.com/xllinbupt"
+  },
+  "homepage": "https://github.com/xllinbupt/MCP2skill",
+  "repository": "https://github.com/xllinbupt/MCP2skill",
+  "license": "MIT",
+  "keywords": [
+    "claude-code",
+    "skill",
+    "mcp",
+    "jobs",
+    "liepin"
+  ],
+  "components": {
+    "skills": [
+      "liepin-jobs"
+    ]
+  },
+  "skills": "./liepin-jobs"
+}
