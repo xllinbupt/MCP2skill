@@ -1,0 +1,38 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.xllinbupt/liepin-jobs",
+  "title": "Liepin Jobs",
+  "description": "Liepin job search and resume workflows backed by the official Liepin MCP server.",
+  "version": "1.0.0",
+  "repository": {
+    "url": "https://github.com/xllinbupt/MCP2skill",
+    "source": "github"
+  },
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://open-mcp.liepin.com/servers/cc4a45655fc3432eaf346555d04be77e/mcp",
+      "headers": [
+        {
+          "name": "Authorization",
+          "description": "Bearer gateway token from the Liepin MCP configuration page. Format: Bearer mcp_gateway_token_xxx",
+          "isRequired": true,
+          "isSecret": true
+        },
+        {
+          "name": "x-user-token",
+          "description": "Liepin user token from the Liepin MCP configuration page.",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ],
+  "_meta": {
+    "io.modelcontextprotocol.registry/publisher-provided": {
+      "source_url": "https://github.com/xllinbupt/MCP2skill",
+      "skill_path": "liepin-jobs/SKILL.md",
+      "auth_required": true
+    }
+  }
+}
