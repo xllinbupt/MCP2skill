@@ -3,6 +3,17 @@ name: liepin-jobs
 description: |
   猎聘求职工具 — 在猎聘上搜索职位、投递简历、查看/编辑简历。
   触发词: 找工作, 搜职位, 投简历, 猎聘, liepin, 求职, 招聘, 简历
+version: 0.1.0
+author: xllin
+license: MIT
+homepage: https://github.com/xllinbupt/MCP2skill
+repository: https://github.com/xllinbupt/MCP2skill
+keywords:
+  - jobs
+  - liepin
+  - resume
+  - mcp
+  - chinese
 requires:
   bins: python3
 allowed-tools: Bash(python3:*),Bash(python:*)
