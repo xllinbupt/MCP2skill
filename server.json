@@ -3,7 +3,7 @@
   "name": "io.github.xllinbupt/liepin-jobs",
   "title": "Liepin Jobs",
   "description": "Liepin job search and resume workflows backed by the official Liepin MCP server.",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "repository": {
     "url": "https://github.com/xllinbupt/MCP2skill",
     "source": "github"
@@ -11,14 +11,8 @@
   "remotes": [
     {
       "type": "streamable-http",
-      "url": "https://open-mcp.liepin.com/servers/cc4a45655fc3432eaf346555d04be77e/mcp",
+      "url": "https://open-agent.liepin.com/mcp/user",
       "headers": [
-        {
-          "name": "Authorization",
-          "description": "Bearer gateway token from the Liepin MCP configuration page. Format: Bearer mcp_gateway_token_xxx",
-          "isRequired": true,
-          "isSecret": true
-        },
         {
           "name": "x-user-token",
           "description": "Liepin user token from the Liepin MCP configuration page.",

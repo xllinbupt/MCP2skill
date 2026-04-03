@@ -73,31 +73,29 @@ server.json
 
 ## Authentication
 
-The `liepin-jobs` skill requires two Liepin tokens from the official Liepin MCP page:
+The `liepin-jobs` skill requires one Liepin token from the official Liepin MCP page:
 
-- `LIEPIN_GATEWAY_TOKEN`
 - `LIEPIN_USER_TOKEN`
 
 The skill guides the user through setup and never assumes tokens already exist.
 
-The remote MCP endpoint declared in `server.json` uses the same token pair through:
+The remote MCP endpoint declared in `server.json` uses the same token through:
 
-- `Authorization: Bearer <gateway_token>`
 - `x-user-token: <user_token>`
 
 ## Distribution
 
-This skill has been published or submitted to the following platforms:
+This skill has been published, submitted, or prepared for distribution on the following platforms.
 
 ### Already Live
 
-| Platform | Link |
-|----------|------|
-| **ClawHub (OpenClaw)** | Published via `clawhub publish` |
-| **Official MCP Registry** | `io.github.xllinbupt/liepin-jobs` |
-| **GitHub** | https://github.com/xllinbupt/MCP2skill |
+| Platform | Status | Link |
+|----------|--------|------|
+| **ClawHub (OpenClaw)** | Published (user confirmed) | Public listing URL pending |
+| **Official MCP Registry** | Live | https://registry.modelcontextprotocol.io/v0.1/servers?search=io.github.xllinbupt/liepin-jobs |
+| **GitHub** | Live | https://github.com/xllinbupt/MCP2skill |
 
-### PR Submitted (pending merge)
+### PR Submitted
 
 | Platform | PR |
 |----------|-----|
@@ -108,14 +106,14 @@ This skill has been published or submitted to the following platforms:
 | **BehiSecc/awesome-claude-skills** | [#132](https://github.com/BehiSecc/awesome-claude-skills/pull/132) |
 | **VoltAgent/awesome-agent-skills** | [#247](https://github.com/VoltAgent/awesome-agent-skills/pull/247) |
 
-### Auto-indexed (no action needed)
+### Auto-indexing / Crawler-based Platforms
 
 | Platform | Status |
 |----------|--------|
-| **SkillHub** (skillhub.club) | GitHub topics configured, waiting for crawler |
-| **LobeHub Skills** (lobehub.com/skills) | Has SKILL.md, waiting for crawler |
-| **claudemarketplaces.com** | Has `.claude-plugin/`, waiting for crawler |
-| **SkillsMP** (skillsmp.com) | Needs ≥2 GitHub stars to be indexed |
+| **SkillHub** (skillhub.club) | Public marketplace found; waiting for crawler/index sync |
+| **LobeHub Skills** (lobehub.com/skills) | Public marketplace found; waiting for crawler/index sync |
+| **claudemarketplaces.com** | Public marketplace found; repository has `.claude-plugin/` metadata |
+| **SkillsMP** (skillsmp.com) | Public aggregator found; waiting for sync from the GitHub repository |
 
 ## Repository Goals
 
