@@ -2,15 +2,31 @@
 
 Turn MCP-backed tools into installable AI skills.
 
-This repository currently contains one production-ready skill:
+This repository contains one production-ready skill:
 
-- `liepin-jobs`: Search jobs on Liepin, review resumes, update resume content, and apply to jobs with explicit user confirmation.
+- `liepin-jobs`: Search jobs on Liepin, review and update resumes, and apply to jobs with explicit user confirmation — powered by the [`liepin-cli`](https://github.com/liepin-tech-2026/liepin-cil) local CLI tool.
 
 It also includes a published MCP Registry manifest for the Liepin remote MCP server:
 
 - `server.json`: official MCP Registry metadata for `io.github.xllinbupt/liepin-jobs`
 
-## Install
+## Prerequisite: Install `liepin-cli`
+
+This skill wraps the [`liepin-cli`](https://github.com/liepin-tech-2026/liepin-cil) CLI tool. Install it first:
+
+```bash
+# Option A — pip + venv
+python -m venv .venv && source .venv/bin/activate
+pip install -e ".[dev]"   # run inside the liepin-cil clone
+
+# Option B — uv
+git clone https://github.com/liepin-tech-2026/liepin-cil.git
+cd liepin-cil && uv sync
+```
+
+Verify: `liepin-cli --help`
+
+## Install the Skill
 
 ### skills.sh
 
@@ -59,10 +75,10 @@ Skill path:
 liepin-jobs/SKILL.md
 ```
 
-Runtime script:
+Reference:
 
 ```text
-liepin-jobs/liepin_mcp.py
+liepin-jobs/reference.md
 ```
 
 MCP registry manifest:
@@ -73,11 +89,19 @@ server.json
 
 ## Authentication
 
-The `liepin-jobs` skill requires one Liepin token from the official Liepin MCP page:
+The `liepin-jobs` skill requires one Liepin token obtained from the official Liepin MCP page (`https://www.liepin.com/mcp/server`).
 
-- `LIEPIN_USER_TOKEN`
+Token resolution priority: `--token` flag > `LIEPIN_USER_TOKEN` env var > `~/.config/liepin-cli/config.json`
 
-The skill guides the user through setup and never assumes tokens already exist.
+Run the setup flow to save the token locally:
+
+```bash
+liepin-cli setup
+# or
+liepin-cli auth setup
+```
+
+If token expires: `liepin-cli auth open` → `liepin-cli auth setup`
 
 The remote MCP endpoint declared in `server.json` uses the same token through:
 
@@ -91,7 +115,7 @@ This skill has been published, submitted, or prepared for distribution on the fo
 
 | Platform | Status | Link |
 |----------|--------|------|
-| **ClawHub (OpenClaw)** | Published (user confirmed) | Public listing URL pending |
+| **ClawHub (OpenClaw)** | Published | Public listing URL pending |
 | **Official MCP Registry** | Live | https://registry.modelcontextprotocol.io/v0.1/servers?search=io.github.xllinbupt/liepin-jobs |
 | **GitHub** | Live | https://github.com/xllinbupt/MCP2skill |
 
@@ -110,15 +134,15 @@ This skill has been published, submitted, or prepared for distribution on the fo
 
 | Platform | Status |
 |----------|--------|
-| **SkillHub** (skillhub.club) | Public marketplace found; waiting for crawler/index sync |
-| **LobeHub Skills** (lobehub.com/skills) | Public marketplace found; waiting for crawler/index sync |
-| **claudemarketplaces.com** | Public marketplace found; repository has `.claude-plugin/` metadata |
-| **SkillsMP** (skillsmp.com) | Public aggregator found; waiting for sync from the GitHub repository |
+| **SkillHub** (skillhub.club) | Waiting for crawler/index sync |
+| **LobeHub Skills** (lobehub.com/skills) | Waiting for crawler/index sync |
+| **claudemarketplaces.com** | Repository has `.claude-plugin/` metadata |
+| **SkillsMP** (skillsmp.com) | Waiting for sync from the GitHub repository |
 
 ## Repository Goals
 
 - keep skills lightweight and easy to install
-- package MCP workflows as reusable agent skills
+- package CLI workflows as reusable agent skills
 - make each skill publishable across major skill directories
 
 ## License
