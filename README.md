@@ -4,11 +4,11 @@ Turn MCP-backed tools into installable AI skills.
 
 This repository contains one production-ready skill:
 
-- `liepin-jobs`: Search jobs on Liepin, review and update resumes, and apply to jobs with explicit user confirmation — powered by the [`liepin-cli`](https://github.com/liepin-tech-2026/liepin-cil) local CLI tool.
+- `liepin-cli`: Search jobs on Liepin, review and update resumes, and apply to jobs with explicit user confirmation — powered by the [`liepin-cli`](https://github.com/liepin-tech-2026/liepin-cil) local CLI tool.
 
 It also includes a published MCP Registry manifest for the Liepin remote MCP server:
 
-- `server.json`: official MCP Registry metadata for `io.github.xllinbupt/liepin-jobs`
+- `server.json`: official MCP Registry metadata for `io.github.xllinbupt/liepin-cli`
 
 ## Prerequisite: Install `liepin-cli`
 
@@ -31,13 +31,13 @@ Verify: `liepin-cli --help`
 ### skills.sh
 
 ```bash
-npx skills add https://github.com/xllinbupt/MCP2skill --skill liepin-jobs
+npx skills add https://github.com/xllinbupt/MCP2skill --skill liepin-cli
 ```
 
 ### Playbooks
 
 ```bash
-npx playbooks add skill xllinbupt/MCP2skill --skill liepin-jobs
+npx playbooks add skill xllinbupt/MCP2skill --skill liepin-cli
 ```
 
 ### Claude Code marketplace or plugin source
@@ -49,18 +49,18 @@ This repository includes `.claude-plugin/plugin.json` and `.claude-plugin/market
 The Liepin MCP server metadata from this repository has been published to the official MCP Registry under:
 
 ```text
-io.github.xllinbupt/liepin-jobs
+io.github.xllinbupt/liepin-cli
 ```
 
 You can look it up via:
 
 ```bash
-curl "https://registry.modelcontextprotocol.io/v0.1/servers?search=io.github.xllinbupt/liepin-jobs"
+curl "https://registry.modelcontextprotocol.io/v0.1/servers?search=io.github.xllinbupt/liepin-cli"
 ```
 
 ## Skill
 
-### `liepin-jobs`
+### `liepin-cli`
 
 Use this skill when the user wants to:
 
@@ -72,13 +72,13 @@ Use this skill when the user wants to:
 Skill path:
 
 ```text
-liepin-jobs/SKILL.md
+liepin-cli/SKILL.md
 ```
 
 Reference:
 
 ```text
-liepin-jobs/reference.md
+liepin-cli/reference.md
 ```
 
 MCP registry manifest:
@@ -89,7 +89,7 @@ server.json
 
 ## Authentication
 
-The `liepin-jobs` skill requires one Liepin token obtained from the official Liepin MCP page (`https://www.liepin.com/mcp/server`).
+The `liepin-cli` skill requires one Liepin token obtained from the official Liepin MCP page (`https://www.liepin.com/mcp/server`).
 
 Token resolution priority: `--token` flag > `LIEPIN_USER_TOKEN` env var > `~/.config/liepin-cli/config.json`
 
@@ -116,7 +116,7 @@ This skill has been published, submitted, or prepared for distribution on the fo
 | Platform | Status | Link |
 |----------|--------|------|
 | **ClawHub (OpenClaw)** | Published | Public listing URL pending |
-| **Official MCP Registry** | Live | https://registry.modelcontextprotocol.io/v0.1/servers?search=io.github.xllinbupt/liepin-jobs |
+| **Official MCP Registry** | Live | https://registry.modelcontextprotocol.io/v0.1/servers?search=io.github.xllinbupt/liepin-cli |
 | **GitHub** | Live | https://github.com/xllinbupt/MCP2skill |
 
 ### PR Submitted

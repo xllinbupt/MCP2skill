@@ -1,7 +1,7 @@
 {
   "owner": "xllinbupt",
-  "slug": "liepin-jobs",
-  "displayName": "Liepin Jobs",
+  "slug": "liepin-cli",
+  "displayName": "Liepin CLI",
   "latest": {
     "version": "0.3.0",
     "publishedAt": 1775197000609,

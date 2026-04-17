@@ -1,5 +1,5 @@
 ---
-name: liepin-jobs
+name: liepin-cli
 description: |
   猎聘求职工具 — 在猎聘上搜索职位、投递简历、查看/编辑简历。
   Use when Liepin (猎聘) workflows need the CLI—missing or expired token, unauthorized responses, first-time setup, resume fetch/update, job search or apply, choosing job-kind from search results, machine-readable JSON for parsing.

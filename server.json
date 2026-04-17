@@ -1,8 +1,8 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-  "name": "io.github.xllinbupt/liepin-jobs",
-  "title": "Liepin Jobs",
-  "description": "Liepin job search and resume workflows backed by the official Liepin MCP server.",
+  "name": "io.github.xllinbupt/liepin-cli",
+  "title": "Liepin CLI",
+  "description": "Liepin job search and resume workflows via liepin-cli local CLI tool.",
   "version": "1.1.0",
   "repository": {
     "url": "https://github.com/xllinbupt/MCP2skill",
@@ -25,7 +25,7 @@
   "_meta": {
     "io.modelcontextprotocol.registry/publisher-provided": {
       "source_url": "https://github.com/xllinbupt/MCP2skill",
-      "skill_path": "liepin-jobs/SKILL.md",
+      "skill_path": "liepin-cli/SKILL.md",
       "auth_required": true
     }
   }
