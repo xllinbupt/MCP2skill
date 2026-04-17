@@ -1,6 +1,8 @@
 ---
 name: liepin-jobs
-description: Use when Liepin (猎聘) workflows need the CLI—missing or expired token, unauthorized responses, first-time setup, resume fetch/update, job search or apply, choosing job-kind from search results, machine-readable JSON for parsing, or summarizing user-facing `liepin-cli` help without advanced flags.
+description: |
+  猎聘求职工具 — 在猎聘上搜索职位、投递简历、查看/编辑简历。
+  Use when Liepin (猎聘) workflows need the CLI—missing or expired token, unauthorized responses, first-time setup, resume fetch/update, job search or apply, choosing job-kind from search results, machine-readable JSON for parsing.
   触发词: 找工作, 搜职位, 投简历, 猎聘, liepin, 求职, 招聘, 简历
 version: 0.3.0
 author: xllin
@@ -18,34 +20,19 @@ requires:
 allowed-tools: Bash(liepin-cli:*)
 ---
 
-# liepin-cli
+# liepin-jobs
 
 ## Overview
 `liepin-cli` 是猎聘简历查询与更新、职位搜索与投递的本地 CLI 工具。优先使用已安装的 `liepin-cli` 命令，而非手写 HTTP 请求。
 
+若用户尚未安装 `liepin-cli`，引导其参考 [liepin-tech-2026/liepin-cil](https://github.com/liepin-tech-2026/liepin-cil) 完成安装后再继续。
+
 ## When to Use
-- 运行 `liepin-cli`
 - 管理猎聘 token 配置、刷新或状态查看
 - 获取或更新简历数据
 - 搜索职位或投递职位
 
 Do not use this skill for unrelated non-Liepin tasks.
-
-## 安装 CLI（首次使用必须）
-
-若尚未安装 `liepin-cli`，请先从 [liepin-tech-2026/liepin-cil](https://github.com/liepin-tech-2026/liepin-cil) 安装：
-
-```bash
-# 方式一 — pip + 虚拟环境
-python -m venv .venv && source .venv/bin/activate
-pip install -e ".[dev]"
-
-# 方式二 — uv
-git clone https://github.com/liepin-tech-2026/liepin-cil.git
-cd liepin-cil && uv sync
-```
-
-安装完成后验证：`liepin-cli --help`
 
 ## Core Rules
 - 优先使用已安装的 `liepin-cli` 命令。
@@ -89,4 +76,4 @@ cd liepin-cil && uv sync
 - 一次性倾倒全部简历字段，而不是优先摘要最有用的业务字段
 
 ## Reference
-详见 [reference.md](reference.md)，包含安装上下文、命令表、auth 恢复步骤、`--input` / `--output` 说明。
+详见 [reference.md](reference.md)，包含安装上下文、完整命令表、auth 恢复步骤、`--input` / `--output` 说明。
